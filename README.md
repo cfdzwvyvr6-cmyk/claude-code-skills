@@ -1,4 +1,4 @@
-# discovery-skills
+# claude-code-skills
 
 Claude Code skills that find the real goal before planning, and hand heavy research off to the Gemini web app.
 
@@ -18,18 +18,18 @@ Flow: `/discover` → (`/gemini-handoff` as needed) → `/interview` → spec in
 macOS / Linux:
 
 ```sh
-git clone <this repo url> ~/discovery-skills
-bash ~/discovery-skills/install.sh
+git clone https://github.com/cfdzwvyvr6-cmyk/claude-code-skills ~/claude-code-skills
+bash ~/claude-code-skills/install.sh
 ```
 
 Windows (PowerShell):
 
 ```powershell
 git clone https://github.com/23jmo/jmo-skills $env:TEMP\jmo-skills
-git clone <this repo url> $HOME\discovery-skills
+git clone https://github.com/cfdzwvyvr6-cmyk/claude-code-skills $HOME\claude-code-skills
 New-Item -ItemType Directory -Force $HOME\.claude\skills | Out-Null
 Copy-Item -Recurse -Force $env:TEMP\jmo-skills\skills\* $HOME\.claude\skills\
-Copy-Item -Recurse -Force $HOME\discovery-skills\skills\* $HOME\.claude\skills\
+Copy-Item -Recurse -Force $HOME\claude-code-skills\skills\* $HOME\.claude\skills\
 ```
 
 Restart Claude Code (or start a new session), then type `/` to check.
@@ -41,9 +41,9 @@ In claude.ai/code, open the environment menu, choose the environment, click **Ed
 ```bash
 #!/bin/bash
 set -e
-GIT_LFS_SKIP_SMUDGE=1 git clone -q --depth 1 <this repo url> /tmp/discovery-skills
-DISCOVERY_REPO=<this repo url> bash /tmp/discovery-skills/install.sh
-rm -rf /tmp/discovery-skills
+GIT_LFS_SKIP_SMUDGE=1 git clone -q --depth 1 https://github.com/cfdzwvyvr6-cmyk/claude-code-skills /tmp/claude-code-skills
+bash /tmp/claude-code-skills/install.sh
+rm -rf /tmp/claude-code-skills
 ```
 
 Repeat for every environment. The environment's network access must allow github.com. If this repository is private, the setup script cannot clone it without access; keep it public or see the cloud docs on GitHub access.

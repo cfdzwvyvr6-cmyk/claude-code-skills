@@ -7,7 +7,7 @@ set -e
 
 SKILLS_DIR="$HOME/.claude/skills"
 JMO_REPO="https://github.com/23jmo/jmo-skills"
-DISCOVERY_REPO="${DISCOVERY_REPO:-}"
+DISCOVERY_REPO="${DISCOVERY_REPO:-}"  # e.g. https://github.com/cfdzwvyvr6-cmyk/claude-code-skills
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
